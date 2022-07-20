@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteAdministracion" language="groovy" pageWidth="612" pageHeight="792" columnWidth="572" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9d37d9df-d062-4be7-b38e-b707c44eb87d">
+	<property name="ireport.zoom" value="1.9487171000000045"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[call sp_ListarClientes();]]>
+	</queryString>
+	<field name="codigoCliente" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombresCliente" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="apellidosCliente" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefonoCliente" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccionCliente" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="email" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoLocal" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoAdministracion" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoTipoCliente" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="752">
+			<image scaleImage="FillFrame" hAlign="Center" vAlign="Middle">
+				<reportElement stretchType="RelativeToTallestObject" x="-1" y="0" width="574" height="752" uuid="494766e2-189f-4655-ab01-bd99ef5ede33"/>
+				<imageExpression><![CDATA["C:\\Users\\chalo\\Desktop\\PROYECTO FINAL\\KinalMall2018473\\src\\org\\gonzalomonzon\\images\\diseñoReporte.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="400" y="727" width="161" height="25" forecolor="#1995AD" backcolor="#1995AD" uuid="d9498b9e-5409-4c24-bded-f48fd8e1c775"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom" rotation="None">
+					<font fontName="Dubai Light" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+					<paragraph lineSpacing="Double"/>
+				</textElement>
+				<text><![CDATA[Gonzalo Joaquín Monzón Chavarría®]]></text>
+			</staticText>
+		</band>
+	</background>
+	<title>
+		<band height="80" splitType="Stretch">
+			<staticText>
+				<reportElement x="129" y="0" width="319" height="80" forecolor="#1995AD" backcolor="#1995AD" uuid="419dca30-b2bf-4413-84be-105a7d0c517d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None">
+					<font fontName="Dubai Light" size="46" isBold="false"/>
+					<paragraph lineSpacing="Double"/>
+				</textElement>
+				<text><![CDATA[Clientes]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="572" height="25" forecolor="#BCBABE" backcolor="#A1D6E2" uuid="dd28bf0f-8953-4c18-bdea-791f3e37d4cb"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="102" y="0" width="73" height="25" uuid="f81c8b35-2573-4ea6-b87e-6d7321a959fd"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Nombres cliente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="0" width="66" height="25" uuid="189e5345-bb41-459f-8bad-8e7eef29e10a"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Código cliente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="211" y="0" width="74" height="25" uuid="7e2b918a-3a0e-48e2-b460-b4ce8a019d72"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Apellidos cliente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="326" y="0" width="72" height="25" uuid="dd58786f-cdaf-4b46-8cff-ea80d6e6eb07"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Teléfono cliente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="423" y="0" width="59" height="25" uuid="f53e737e-dbdb-411f-a6e0-328e5e2d8eea"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Email cliente]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="572" height="20" forecolor="#BCBABE" backcolor="#F1F1F2" uuid="b4f4b7cf-05b5-4955-8a18-a0122db79527"/>
+			</rectangle>
+			<textField>
+				<reportElement x="12" y="0" width="66" height="20" uuid="fba48f39-8e3b-41b0-acb1-8b3b9b54d660"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{codigoCliente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="102" y="0" width="105" height="20" uuid="9db32f04-1f36-4a47-81a4-6198a7f4914d"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nombresCliente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="211" y="0" width="110" height="20" uuid="0cff9d3f-cc75-45a2-a748-4018eedb5612"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{apellidosCliente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="326" y="0" width="72" height="20" uuid="5ebc52c4-260f-44d9-bc22-a05a0b737d3a"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{telefonoCliente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="423" y="0" width="140" height="20" uuid="aa566a38-f943-4b23-bb81-64434ff6decc"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="50"/>
+	</summary>
+</jasperReport>

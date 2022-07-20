@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="1250.0" styleClass="anchorPane" stylesheets="@../resource/KinallMallCSS.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.gonzalomonzon.controller.LocalesController">
+   <children>
+      <AnchorPane fx:id="anchorPaneAdministracion" prefHeight="450.0" prefWidth="240.0" stylesheets="@../resource/KinallMallCSS.css">
+         <children>
+            <Label layoutX="76.0" layoutY="14.0" text="Locales" textFill="WHITE">
+               <font>
+                  <Font name="Marlett" size="30.0" />
+               </font>
+            </Label>
+            <Pane layoutX="64.0" layoutY="58.0" prefHeight="126.0" prefWidth="122.0" styleClass="pane4" stylesheets="@../resource/KinallMallCSS.css">
+               <children>
+                  <ImageView fitHeight="96.0" fitWidth="100.0" layoutX="13.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/locales.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Button fx:id="btnNuevo" alignment="TOP_LEFT" layoutY="194.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="45.0" prefWidth="240.0" styleClass="botonAdministracion" stylesheets="@../resource/KinallMallCSS.css" text="Nuevo" textFill="WHITE">
+               <font>
+                  <Font name="Marlett" size="23.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="imgNuevo" fitHeight="45.0" fitWidth="40.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/nuevo.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnEliminar" alignment="TOP_LEFT" layoutY="250.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="45.0" prefWidth="240.0" styleClass="botonAdministracion" stylesheets="@../resource/KinallMallCSS.css" text="Eliminar" textFill="WHITE">
+               <font>
+                  <Font name="Marlett" size="23.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="imgEliminar" fitHeight="45.0" fitWidth="40.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/eliminar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnEditar" alignment="TOP_LEFT" layoutY="306.0" mnemonicParsing="false" onAction="#editar" prefHeight="45.0" prefWidth="240.0" styleClass="botonAdministracion" stylesheets="@../resource/KinallMallCSS.css" text="Editar" textFill="WHITE">
+               <font>
+                  <Font name="Marlett" size="23.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="imgEditar" fitHeight="45.0" fitWidth="40.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/editar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnReporte" alignment="TOP_LEFT" layoutY="362.0" mnemonicParsing="false" onAction="#reporte" prefHeight="45.0" prefWidth="240.0" styleClass="botonAdministracion" stylesheets="@../resource/KinallMallCSS.css" text="Reporte" textFill="WHITE">
+               <font>
+                  <Font name="Marlett" size="23.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="imgReporte" fitHeight="45.0" fitWidth="40.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/reporte.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="36.0" fitWidth="32.0" layoutX="1203.0" layoutY="10.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/regresar.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="258.0" layoutY="8.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="26.0" prefWidth="106.0" styleClass="labellll" stylesheets="@../resource/KinallMallCSS.css" text="Código local" textFill="WHITE">
+         <font>
+            <Font name="Marlett" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCodigoLocal" editable="false" layoutX="371.0" layoutY="8.0" prefHeight="26.0" prefWidth="60.0">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </TextField>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="258.0" layoutY="50.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="26.0" prefWidth="122.0" styleClass="labellll" stylesheets="@../resource/KinallMallCSS.css" text="Saldo a favor" textFill="WHITE">
+         <font>
+            <Font name="Marlett" size="16.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="566.0" layoutY="50.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="26.0" prefWidth="129.0" styleClass="labellll" stylesheets="@../resource/KinallMallCSS.css" text="Saldo a contra" textFill="WHITE">
+         <font>
+            <Font name="Marlett" size="16.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="881.0" layoutY="50.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="26.0" prefWidth="154.0" styleClass="labellll" stylesheets="@../resource/KinallMallCSS.css" text="Meses pendientes" textFill="WHITE">
+         <font>
+            <Font name="Marlett" size="16.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="991.0" layoutY="8.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="26.0" prefWidth="115.0" styleClass="labellll" stylesheets="@../resource/KinallMallCSS.css" text="Disponibilidad" textFill="WHITE">
+         <font>
+            <Font name="Marlett" size="16.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="436.0" layoutY="8.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="26.0" prefWidth="115.0" styleClass="labellll" stylesheets="@../resource/KinallMallCSS.css" text="Valor del local" textFill="WHITE">
+         <font>
+            <Font name="Marlett" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtValorLocal" editable="false" layoutX="554.0" layoutY="8.0" prefHeight="26.0" prefWidth="110.0">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </TextField>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="669.0" layoutY="8.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="26.0" prefWidth="203.0" styleClass="labellll" stylesheets="@../resource/KinallMallCSS.css" text="Valor de la administración" textFill="WHITE">
+         <font>
+            <Font name="Marlett" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtValorAdministracion" editable="false" layoutX="875.0" layoutY="8.0" prefHeight="26.0" prefWidth="110.0">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtDisponibilidad" editable="false" layoutX="1109.0" layoutY="8.0" prefHeight="26.0" prefWidth="80.0">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtSaldoFavor" editable="false" layoutX="390.0" layoutY="50.0" prefHeight="26.0" prefWidth="160.0">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtSaldoContra" editable="false" layoutX="706.0" layoutY="50.0" prefHeight="26.0" prefWidth="160.0">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtMesesPendientes" editable="false" layoutX="1045.0" layoutY="50.0" prefHeight="26.0" prefWidth="80.0">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </TextField>
+      <TableView fx:id="tblLocales" layoutX="258.0" layoutY="89.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="346.0" prefWidth="975.0" stylesheets="@../resource/KinallMallCSS.css">
+         <columns>
+            <TableColumn fx:id="colCodigoLocal" prefWidth="132.80001831054688" text="Codigo del local" />
+            <TableColumn fx:id="colSaldoFavor" prefWidth="112.0" text="Saldo a favor" />
+            <TableColumn fx:id="colSaldoContra" prefWidth="119.19998168945312" text="Saldo a contra" />
+            <TableColumn fx:id="colMesesPendientes" prefWidth="147.20001220703125" text="Meses Pendientes" />
+            <TableColumn fx:id="colDisponibilidad" prefWidth="124.79998779296875" text="Disponibilidad" />
+            <TableColumn fx:id="colValorLocal" prefWidth="128.800048828125" text="Valor del local" />
+            <TableColumn fx:id="colValorAdministracion" prefWidth="214.39996337890625" text="Valor de la administración" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>
